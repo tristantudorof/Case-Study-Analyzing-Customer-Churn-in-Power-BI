@@ -138,6 +138,36 @@ From the map with Conditional Formating I can see that CA is the State with the 
 2. ~45% of the reasons why customers churn are related to competitors.
 3. The churn rate in California is abnormally high, >60%
 
+# Demographic 
+
+I will gather the categorized demographic variables related to age in a new column called Demographics
+
+Using the IF() function to end up with a column with three categories: "Senior","Under 30", and "Other".
+
+Demographics =
+IF(
+    'Databel - Data'[Senior] = "Yes",
+    "Senior",
+    IF(
+        'Databel - Data'[Under 30] = "Yes",
+        "Under 30",
+        "Other"
+    )
+)
+
+<img width="119" height="189" alt="Screenshot 2026-01-13 at 6 21 19 PM" src="https://github.com/user-attachments/assets/a4a82dc9-fa0d-4fb0-9b14-96fb7e29f812" />
+
+This combines the age data under 30 and senior columns with the additional age data being represented as other into one column. 
+
+I will now use a Stacked column chart to visualize the new column and a Table visual to see the values in rows.
 
 
+<img width="434" height="559" alt="Screenshot 2026-01-13 at 6 32 17 PM" src="https://github.com/user-attachments/assets/232753ba-5612-4468-8d1a-4cb93f61f4f5" />
+
+
+From the stacked bar chart, I can see that Seniors have the highest churn rate.
+
+When I put the Churn Rate and Demographics into a Table visual, I can see that Seniors have a 38.46% Churn Rate, while others only have a 24.54%,  and Under 30 is 23%
+
+<img width="149" height="78" alt="Screenshot 2026-01-13 at 6 39 23 PM" src="https://github.com/user-attachments/assets/b962a6d3-9658-479b-aeb9-08db6cec2980" />
 
