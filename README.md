@@ -104,12 +104,12 @@ I created a column chart listing the different reasons why customers churn in de
 
 I made a tree map with churn reasons to find out the top reason and display all churn categories in one clear visualization.
 
- I used the Churn Category column. ( ex. The "Extra data charges", "Price too high" and other price related reasons are grouped together in the "Price" category) 
- As the Category and Count of Churn Label as a percentage of total to make the tree map. while also filtering the visual to show churn label "yes" 
+ I used the Churn Category column. ( ex. The "Extra data charges", "Price too high", and other price related reasons are grouped together in the "Price" category) 
+ As the Category and Count of Churn Label as a percentage of the total to make the tree map. while also filtering the visual to show churn label "yes" 
 
  <img width="1325" height="592" alt="Screenshot 2025-12-22 at 9 33 32 PM" src="https://github.com/user-attachments/assets/91d9fc33-348e-42c4-ba02-9f20a59becd2" />
 
-From this, i can clearly see competitor is the main reason for churn.  
+From this, I can clearly see that competitors are the main reason for churn.  
 
 
 # Use maps to our advantage
@@ -120,7 +120,7 @@ Add Churn Rate, Number of Customers, and Number of Churned Customers to Tooltips
 
 <img width="1329" height="563" alt="Screenshot 2025-12-22 at 9 39 23 PM" src="https://github.com/user-attachments/assets/9c286e47-ec54-442f-9381-7d4dc75712ec" />
 
-Next, I'll add different gradients of color so it's easy to spot states with a higher churn rate.
+Next, I'll add different color gradients so it's easy to spot states with a higher churn rate.
 
 To do this i add a conditional format 
 
@@ -128,8 +128,15 @@ To do this i add a conditional format
 
 <img width="894" height="502" alt="Screenshot 2025-12-22 at 9 41 58 PM" src="https://github.com/user-attachments/assets/9ff3517b-d6b3-41f8-bb23-7e1531d83975" />
 
-From the map with Conditional Formating we can see that CA is the State with the highest churn rate, with 63%.
+From the map with Conditional Formating I can see that CA is the State with the highest churn rate, with 63%.
 
+
+
+# Insights Discovered So Far
+
+1. The churn rate for Databel is ~27%
+2. ~45% of the reasons why customers churn are related to competitors.
+3. The churn rate in California is abnormally high, >60%
 
 
 
