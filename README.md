@@ -210,7 +210,110 @@ Next, I converted the chart to a line and stacked column chart and added the Chu
 
 <img width="881" height="557" alt="Screenshot 2026-01-14 at 1 34 46 PM" src="https://github.com/user-attachments/assets/50d5d1da-50c6-449d-b9cb-8a5de7a4db53" />
 
+From the chart, I can clearly see that groups of 6 have the lowest churn rate.
 
 
+# Contract Types
 
+One Year, Two Year, and Month to Month. It would be a good idea to gather the values of yearly contracts into one. This way, I can observe the difference between the customers who have only yearly contracts and those having monthly contracts.
+
+
+ The SWITCH() Function 
+
+I will use the Switch Function to categorize the contract types and name it Contract Category.
+
+DAX SWITCH(<expression>, <value>, <result>[, <value>, <result>]…[, <else>])
+
+Contract Category =
+SWITCH(
+    'Databel - Data'[Contract Type],
+    "One Year", "Yearly",
+    "Two Year", "Yearly",
+    "Month-to-Month", "Monthly",
+    "Other"
+)
+
+To visualize this, I added a multi-Row Card, then used Contract Category and Chrun Rate in the Fields. 
+
+<img width="197" height="144" alt="Screenshot 2026-01-14 at 2 55 35 PM" src="https://github.com/user-attachments/assets/e6f757b6-84cf-42bc-b04d-f59f555cd3ad" />
+
+ from the data i can see that those who have monthly contracts churn more than the customers who have yearly-based contracts.
+ 
+I am also interested in observing if gender plays a role in the churn rate.
+
+I create a clustered column chart to see how customers differ in terms of churn rate by looking at their contract categories and gender.
+
+<img width="469" height="409" alt="Screenshot 2026-01-14 at 3 01 57 PM" src="https://github.com/user-attachments/assets/9537341c-2917-478d-a767-70008ae52b50" />
+
+From the chart, I can see that Females have the largest Churn Rate on the monthly contract category (our largest category) at 47.31%
+
+
+# Unlimited plan
+
+Databel has a hypothesis that people who are not on an unlimited data plan are more likely to churn.
+
+My task is to investigate how the Unlimited Data Plan influences the churn rate.
+
+I will create a Table visualization that displays the churn rate for customers who have the unlimited plan and for customers who don't.
+
+I insert a table visual and add Unlimited Data Plan, Churn Rate, and Number of Customers to Values.
+
+<img width="212" height="63" alt="Screenshot 2026-01-14 at 3 28 34 PM" src="https://github.com/user-attachments/assets/8d36c51e-0d9d-4a46-acf3-f0526729c093" />
+
+It appears that customers who are on an unlimited plan are more likely to churn.
+
+To see if it is related to a certain amount of mobile data (GB) being used, 
+I create a new column Grouped Consumption that classifies the average monthly GB download in the following groups:
+
+Less than 5 GB.
+
+Between 5 and 10 GB.
+
+10 or more GB.
+
+DAX
+
+Grouped Consumption =
+IF (
+    [Avg Monthly GB Download] < 5,
+    "Less than 5 GB",
+    IF (
+        [Avg Monthly GB Download] < 10,
+        "Between 5 and 10 GB",
+        "10 or more GB"
+    )
+)
+
+I then created a clustered bar chart to see Churn Rate by Unlimited Data Plan and by the different groups.
+
+<img width="568" height="424" alt="Screenshot 2026-01-14 at 3 29 04 PM" src="https://github.com/user-attachments/assets/c178b493-e862-4305-aafa-1439ae5e83fe" />
+
+<img width="558" height="257" alt="Screenshot 2026-01-14 at 3 29 53 PM" src="https://github.com/user-attachments/assets/6a8fdc6c-2af5-49fb-8fca-afed54d9fd0a" />
+
+34.71% churn rate for people on an unlimited plan who consume less than 5 GB of data
+
+#International Calls
+
+The analysis requirement given by Databel includes a request to analyze the international activity of customers and its relationship to churn. 
+
+They are curious about the behavior of customers who call internationally, and if paying for an international plan influences their loyalty.
+
+I create a Matrix Visual, and add Intl Plan to Columns, Intl Active to Rows, and Churn Rate to Values.
+Then change the font colors to visually differentiate high values from low values.
+
+<img width="224" height="103" alt="Screenshot 2026-01-14 at 3 49 11 PM" src="https://github.com/user-attachments/assets/7ae02e9d-8d8d-4790-89bc-c0958eaf3780" />
+
+Databel wants to focus on the budget on a state-by-state basis for the promotion of the international plan.
+
+So I change the data category of State to "State or Province". Then, add a map visualization that displays the different churn rates of each state.
+
+<img width="321" height="364" alt="Screenshot 2026-01-14 at 3 43 58 PM" src="https://github.com/user-attachments/assets/6532b6c0-f8a1-4e17-acb8-53a9c5ec4f3d" />
+
+For the map visualization, I added State to the map as Location and Churn Rate as Bubble Size.
+
+<img width="537" height="379" alt="Screenshot 2026-01-14 at 3 49 54 PM" src="https://github.com/user-attachments/assets/9280bc81-7fc1-4bec-83b9-80a344787d02" />
+
+In California, 72% of customers who actively make international calls but don't have an international plan churn
+
+<img width="771" height="423" alt="Screenshot 2026-01-14 at 3 54 55 PM" src="https://github.com/user-attachments/assets/eaf1f4db-b73d-4f76-b4fb-f2392131e8e5" />
 
