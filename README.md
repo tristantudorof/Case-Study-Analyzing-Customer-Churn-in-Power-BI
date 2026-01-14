@@ -17,7 +17,6 @@ The dataset contains more than just dimensions, so let's look at some measures. 
 
 
 
-On the Power BI Home tab, I click Get data and choose "Text/CSV", from which I select the file named Databel - Data.csv, and click Open.
 
 
 # The first step in any analysis is doing a data check.
@@ -26,7 +25,7 @@ Metadata
 
 <img width="743" height="630" alt="Screenshot 2025-12-22 at 7 52 56 PM" src="https://github.com/user-attachments/assets/e8f4b4b7-d361-4b28-adcc-0da3cf16f0a0" />
 
-
+On the Power BI Home tab, I click Get data and choose "Text/CSV", from which I select the file named Databel - Data.csv, and click Open.
 
 I'll create two measures to check if the count of Customer ids is equal to the count of Unique Customer ids.
 
