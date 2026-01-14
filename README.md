@@ -7,9 +7,6 @@ My Task: To discover why customers are churning
 
 The Databel dataset consists of 29 different columns and has one row per customer. I'll be analyzing a snapshot of the database at a specific moment in time, meaning there is no time dimension.
 
-The dataset contains numerous dimensions, the first one being Customer_id. The Customer_id is a unique ID that identifies an individual customer. The second column is called Churn Label, and it indicates if a customer churned with "Yes" and "No" labels. The dataset contains various other dimensions, such as demographic fields and information about premium plans.
-
-The dataset contains more than just dimensions, so let's look at some measures. The Total Charges column, for example, takes the sum of all monthly charges billed to a customer. They can all be found in the metadata sheet. 
 
 #Overview Page
 
@@ -24,6 +21,12 @@ The dataset contains more than just dimensions, so let's look at some measures. 
 Metadata
 
 <img width="743" height="630" alt="Screenshot 2025-12-22 at 7 52 56 PM" src="https://github.com/user-attachments/assets/e8f4b4b7-d361-4b28-adcc-0da3cf16f0a0" />
+
+The dataset contains numerous dimensions, the first one being Customer_id. The Customer_id is a unique ID that identifies an individual customer. The second column is called Churn Label, and it indicates if a customer churned with "Yes" and "No" labels. The dataset contains various other dimensions, such as demographic fields and information about premium plans.
+
+The dataset contains more than just dimensions, so let's look at some measures. The Total Charges column, for example, takes the sum of all monthly charges billed to a customer. They can all be found in the metadata sheet. 
+
+
 
 On the Power BI Home tab, I click Get data and choose "Text/CSV", from which I select the file named Databel - Data.csv, and click Open.
 
