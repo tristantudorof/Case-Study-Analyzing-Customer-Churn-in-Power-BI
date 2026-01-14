@@ -183,9 +183,34 @@ To visualize this data, I will create a line and stacked column chart.
 
 Age(bins) on the Shared Axis, Number of Customers on the Column Value, and Churn Rate on the Line Value. 
 
-I sorted Assending based on age for the chart.
+I sorted in ascending order based on age for the chart.
 
 <img width="555" height="559" alt="Screenshot 2026-01-13 at 7 07 01 PM" src="https://github.com/user-attachments/assets/b5b6ba99-2b9f-47b4-8bb6-4cca6b0d1d8c" />
+
+
+# Inspecting Groups
+
+Databel offers group contracts to customers from the same household. The advantage for the customer is a discounted rate.
+
+I will analyze if customers that are part of a group indeed have a lower phone bill, and if it has an impact on the churn rate
+
+I start by changing the format of the Monthly Charge to "Currency" in the Data view.
+
+Then, I created a simple bar chart that plots the average Monthly Charge by Number of Customers in Group.
+
+
+<img width="878" height="558" alt="Screenshot 2026-01-14 at 1 30 42 PM" src="https://github.com/user-attachments/assets/809e7991-5539-42f5-b986-4e4b79cf3925" />
+
+I next add Group to the legend to display the difference in price clearly.
+
+
+<img width="880" height="563" alt="Screenshot 2026-01-14 at 1 32 52 PM" src="https://github.com/user-attachments/assets/cc5a4450-60d8-4bdd-b141-58a4fe5feb84" />
+
+Next, I converted the chart to a line and stacked column chart and added the Churn Rate.
+
+<img width="881" height="557" alt="Screenshot 2026-01-14 at 1 34 46 PM" src="https://github.com/user-attachments/assets/50d5d1da-50c6-449d-b9cb-8a5de7a4db53" />
+
+
 
 
 
