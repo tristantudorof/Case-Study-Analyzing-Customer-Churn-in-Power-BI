@@ -8,7 +8,7 @@ My Task: To discover why customers are churning
 The Databel dataset consists of 29 different columns and has one row per customer. I'll be analyzing a snapshot of the database at a specific moment in time, meaning there is no time dimension.
 
 
-#Overview Page
+# Overview Page
 
 <img width="946" height="553" alt="Screenshot 2026-01-14 at 4 34 08 PM" src="https://github.com/user-attachments/assets/43ab0520-e640-4cde-b9a7-22cc807046b3" />
 
