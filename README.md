@@ -9,7 +9,7 @@ The Databel dataset consists of 29 different columns and has one row per custome
 
 The dataset contains numerous dimensions, the first one being Customer_id. The Customer_id is a unique ID that identifies an individual customer. The second column is called Churn Label, and it indicates if a customer churned with "Yes" and "No" labels. The dataset contains various other dimensions, such as demographic fields and information about premium plans.
 
-The dataset contains more than just dimensions, so let's look at some measures. The Total Charges column, for example, takes the sum of all monthly charges billed to a customer. You can see the description of the other columns in here too, but they can all be found in the metadata sheet. 
+The dataset contains more than just dimensions, so let's look at some measures. The Total Charges column, for example, takes the sum of all monthly charges billed to a customer. They can all be found in the metadata sheet. 
 
 
 
@@ -397,6 +397,105 @@ By using the interactive page, I was able to filter and find the answer.
 50.67%
 
 
+# Payment method and contract category
+
+While going through all the columns in the table, I notice I haven't investigated customer service calls.
+My task is to create a report with a scatter plot visual showing the contract and payment type, and combine it with two card visuals related to customer service calls.
+
+
+I'll create a new measure that calculates the average customer service calls per customer, and name my new measure Avg Customer Service Calls.
+
+DAX
+
+Avg Customer Service Calls =
+DIVIDE(
+    SUM([Customer Service Calls]),
+    DISTINCTCOUNT([Customer ID])
+
+In a new page I'll create two new card visualization, one with the total customer service calls, and one with the average customer service calls.
+
+<img width="196" height="382" alt="Screenshot 2026-01-14 at 5 04 17 PM" src="https://github.com/user-attachments/assets/cdbf9e12-5d9b-49f5-888a-9e80c38c03d1" />
+
+Next, I'll copy the line chart (Churn rate by Account Length) and turn it into a scatter plot using the average account length. Also adding contract category and payment method to see the churn rates for each category visually.
+
+I'll add Payment Method to Values, average of Account Length to X Axis, Churn Rate to Y Axis, and Contract Category to Legend
+
+And add a slicer to filter the contract category and the payment method.
+
+<img width="688" height="379" alt="Screenshot 2026-01-14 at 5 20 14 PM" src="https://github.com/user-attachments/assets/f27e499a-7bb6-49d5-8389-1e85268b71ad" />
+
+And now, by filtering, we can find specific answers.
+Like, what's the average number of customer service calls for customers who are on a monthly contract and pay by direct debit?
+
+1.47 Avg Customer Service Calls with a Churn Rate of 53.90%
+
+<img width="849" height="390" alt="Screenshot 2026-01-14 at 5 21 35 PM" src="https://github.com/user-attachments/assets/e73bf9de-3229-410e-af41-1e24fdbd177b" />
 
 
 
+# International and data plan
+
+I'll copy the bar chart I made in the Unlimited Plan page and create two new measures called Avg Extra International Charges and Avg Extra Data Charges.
+
+<img width="740" height="522" alt="Screenshot 2026-01-14 at 5 28 22 PM" src="https://github.com/user-attachments/assets/1fdb1e4d-f15b-4e2f-ad18-aaff8c1a602b" />
+
+Now work on the two new measures.
+
+Dax 
+
+Avg Extra International Charges =
+DIVIDE(
+    SUM([Extra International Charges]),
+    DISTINCTCOUNT([Customer ID]))
+
+And
+
+Dax
+
+Avg Extra Data Charges =
+DIVIDE(
+    SUM([Extra Data Charges]),
+    DISTINCTCOUNT([Customer ID]))
+
+ Now I'll add two cards to your canvas showing the average extra international charges and the average extra data charges.
+
+ <img width="675" height="368" alt="Screenshot 2026-01-14 at 5 39 42 PM" src="https://github.com/user-attachments/assets/3855ef76-3fef-4ee8-b406-27aba882ed16" />
+
+From this, we were asked the question,
+
+What are the average extra data charges for customers who are not on an unlimited data plan and consumed 10 or more gigabytes?
+
+By filtering the chart, the answer was easy to find. 
+
+<img width="675" height="351" alt="Screenshot 2026-01-14 at 5 41 14 PM" src="https://github.com/user-attachments/assets/855ca2e4-07a7-46f5-aba5-eb37b04b7c75" />
+
+31.19
+
+
+
+# More insights
+
+Next, I'll check the characteristics of the states regarding the customer service calls and the churn label.
+
+
+I copied all the card visuals from the Payment and contract and Extra Charges pages and pasted them to a new page.
+
+Then created a Line chart to show the Churn Label and the Avg Customer Service Calls from my data model.
+
+<img width="261" height="375" alt="Screenshot 2026-01-14 at 5 52 55 PM" src="https://github.com/user-attachments/assets/40aaa678-7ab9-436f-ad50-f1f940d298dd" />
+
+Now that I know the general overview I'll elaborate more by adding State to my visualization.
+
+This way, I will be able to observe the average customer service calls for each US state, grouped by churn label.
+
+<img width="671" height="370" alt="Screenshot 2026-01-14 at 5 56 32 PM" src="https://github.com/user-attachments/assets/f4aaa0d6-76ed-477a-bc61-a60610626a4b" />
+
+Next ill copy the map visual from International Calls and change the coloring of the bubbles according to the sum of customer service calls.
+
+<img width="835" height="461" alt="Screenshot 2026-01-14 at 6 03 15 PM" src="https://github.com/user-attachments/assets/8dfd5c76-8ba4-46d6-bc91-c0dcded06646" />
+
+With this,we can answer the following question. 
+
+Which state has the highest churn rate and yet the lowest sum of customer service calls? And what is the number of total customer service calls for that state?
+
+CA with 44 service calls.
