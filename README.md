@@ -11,6 +11,10 @@ The dataset contains numerous dimensions, the first one being Customer_id. The C
 
 The dataset contains more than just dimensions, so let's look at some measures. The Total Charges column, for example, takes the sum of all monthly charges billed to a customer. They can all be found in the metadata sheet. 
 
+#Overview Page
+
+<img width="946" height="553" alt="Screenshot 2026-01-14 at 4 34 08 PM" src="https://github.com/user-attachments/assets/43ab0520-e640-4cde-b9a7-22cc807046b3" />
+
 
 
 On the Power BI Home tab, I click Get data and choose "Text/CSV", from which I select the file named Databel - Data.csv, and click Open.
