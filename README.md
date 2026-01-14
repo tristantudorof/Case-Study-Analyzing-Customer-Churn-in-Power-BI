@@ -313,7 +313,90 @@ For the map visualization, I added State to the map as Location and Churn Rate a
 
 <img width="537" height="379" alt="Screenshot 2026-01-14 at 3 49 54 PM" src="https://github.com/user-attachments/assets/9280bc81-7fc1-4bec-83b9-80a344787d02" />
 
-In California, 72% of customers who actively make international calls but don't have an international plan churn
-
 <img width="771" height="423" alt="Screenshot 2026-01-14 at 3 54 55 PM" src="https://github.com/user-attachments/assets/eaf1f4db-b73d-4f76-b4fb-f2392131e8e5" />
+
+In California, 72% of customers who actively make international calls but don't have an international plan churn.
+
+# Contract type
+
+Databel also wants to improve its customer service since there have been some reported issues.
+
+I will investigate three important topics related to customers: the payment method, the contract type, and how many months a person is a customer.
+
+To start, I will evaluate if the churn rate decreases over time. 
+Creating a Line chart using the account length and churn rate
+
+<img width="528" height="433" alt="Screenshot 2026-01-14 at 4 02 03 PM" src="https://github.com/user-attachments/assets/c89b5aca-7470-4b38-87ad-5dc43509127f" />
+
+It seems the churn rate does decrease over time. Now, I'll investigate how this decrease behaves through the different types of contracts
+
+<img width="776" height="608" alt="Screenshot 2026-01-14 at 4 04 18 PM" src="https://github.com/user-attachments/assets/eaaecef6-500e-4b0d-8ede-ff4e47e828e9" />
+
+Next, I'll make another visualization to see the number of customers by the types of payment.
+
+Ill use use a Pie chart visualization, adding the number of Costumers and Payment Method
+
+<img width="379" height="231" alt="Screenshot 2026-01-14 at 4 07 29 PM" src="https://github.com/user-attachments/assets/1b7a60dd-1226-42e7-9c6b-1e48d32157d7" />
+
+<img width="771" height="434" alt="Screenshot 2026-01-14 at 4 08 25 PM" src="https://github.com/user-attachments/assets/d3f55a43-f475-4c70-9cef-903fe3597096" />
+
+I can see that from the payment types, direct debit is the most common, and paper checks are the least common. 
+
+
+# Overview Page
+
+First I'll need to add visualizations that can easily show total customers, churned customers and churn rate.
+
+I'll copy the three visuals I made earlier from the Churned Demographics.
+
+<img width="429" height="242" alt="Screenshot 2026-01-14 at 4 21 30 PM" src="https://github.com/user-attachments/assets/0189333f-7cf7-4f83-ad6b-1f4def20e85c" />
+
+It is very important to see the reasons why customers churn, and their respective percentage of total customers. so ill also copy in the visualization that displays the different churn reasons and the percentage of total number of customers in each group.
+
+<img width="399" height="425" alt="Screenshot 2026-01-14 at 4 26 59 PM" src="https://github.com/user-attachments/assets/5e80767b-8a1c-4734-8da0-83a090ca6489" />
+
+
+In previous analysis I saw that contract type and churn category have a big impact on churn, so i will also add this to the overview.
+
+<img width="274" height="356" alt="Screenshot 2026-01-14 at 4 30 10 PM" src="https://github.com/user-attachments/assets/943ba4e8-0662-4834-9bd6-72f5fd08631f" />
+
+
+Finally, knowing the state was also important for the new Databel international service promotion, so I will also add that to the overview. 
+
+<img width="946" height="553" alt="Screenshot 2026-01-14 at 4 34 08 PM" src="https://github.com/user-attachments/assets/43ab0520-e640-4cde-b9a7-22cc807046b3" />
+
+
+# Second Page
+
+Next, I'll create a second page in my report that portrays insights about the age buckets and groups
+
+I'll start by adding a graph that has Age (bins). 
+
+<img width="473" height="268" alt="Screenshot 2026-01-14 at 4 39 30 PM" src="https://github.com/user-attachments/assets/25d8d71e-4fb6-4ebe-8b83-6d03d9f4bf13" />
+
+
+Then add a visualization that shows the average monthly charge and churn rate, for group plans.
+
+<img width="402" height="259" alt="Screenshot 2026-01-14 at 4 44 04 PM" src="https://github.com/user-attachments/assets/a62fc681-4e7b-47dd-8bb1-7f31be447645" />
+
+and added a slicer filter using account length in months 
+
+<img width="437" height="103" alt="Screenshot 2026-01-14 at 4 44 30 PM" src="https://github.com/user-attachments/assets/fe57563d-a470-4026-8dee-2119644e07a6" />
+
+
+<img width="937" height="527" alt="Screenshot 2026-01-14 at 4 47 55 PM" src="https://github.com/user-attachments/assets/398da029-4733-4dd8-979f-b351e3ec58ac" />
+
+For this page, I was asked a question. 
+
+What's the churn rate (in %) for customers who are not in a group plan, that belong to the age group 50, and who have an account length of 12 months or less? 
+
+By using the interactive page, I was able to filter and find the answer.
+
+<img width="947" height="526" alt="Screenshot 2026-01-14 at 4 51 14 PM" src="https://github.com/user-attachments/assets/1a37e0a4-90c1-4a64-8d34-dff7d86f453d" />
+
+50.67%
+
+
+
+
 
