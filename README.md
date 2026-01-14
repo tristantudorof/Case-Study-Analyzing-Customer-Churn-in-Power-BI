@@ -171,3 +171,21 @@ When I put the Churn Rate and Demographics into a Table visual, I can see that S
 
 <img width="149" height="78" alt="Screenshot 2026-01-13 at 6 39 23 PM" src="https://github.com/user-attachments/assets/b962a6d3-9658-479b-aeb9-08db6cec2980" />
 
+This suggests that it might be a good idea to analyze the customer age in general.
+
+# Age Bins
+
+From Age I create a new group and make the bin size 5
+
+<img width="743" height="500" alt="Screenshot 2026-01-13 at 6 57 10 PM" src="https://github.com/user-attachments/assets/90ca2c3a-3292-450e-a13a-cafe21cf7300" />
+
+To visualize this data, I will create a line and stacked column chart.
+
+Age(bins) on the Shared Axis, Number of Customers on the Column Value, and Churn Rate on the Line Value. 
+
+I sorted Assending based on age for the chart.
+
+<img width="555" height="559" alt="Screenshot 2026-01-13 at 7 07 01 PM" src="https://github.com/user-attachments/assets/b5b6ba99-2b9f-47b4-8bb6-4cca6b0d1d8c" />
+
+
+
